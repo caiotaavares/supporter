@@ -1,9 +1,7 @@
 package com.supporter.supporterWeb.Models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +9,9 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "Posts")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class post {
 
     @Id

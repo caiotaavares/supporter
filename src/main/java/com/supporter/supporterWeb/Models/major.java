@@ -1,9 +1,7 @@
 package com.supporter.supporterWeb.Models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 
@@ -11,6 +9,9 @@ import java.util.ArrayList;
 @Setter
 @Entity
 @Table(name = "Majors")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class major {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

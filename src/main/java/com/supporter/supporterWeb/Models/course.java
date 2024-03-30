@@ -1,14 +1,15 @@
 package com.supporter.supporterWeb.Models;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "Courses")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class course {
 
     @Id
