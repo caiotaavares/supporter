@@ -22,7 +22,7 @@ public class major {
 
     @NonNull
     @OneToMany
-    @JoinColumn(name = "courses_id")
+    @JoinColumn(name = "major_id")
     public ArrayList<course> courses;
 
     @Override

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 @Getter
 @Setter
@@ -21,6 +22,8 @@ public class post {
     @NonNull
     private String name;
     @NonNull
+    private String description;
+    @NonNull
     private String pdfDbName;
     @NonNull
     private String link;
@@ -32,6 +35,10 @@ public class post {
     @OneToOne
     @JoinColumn(name = "major_id")
     private major major;
+
+    @OneToMany
+    @JoinColumn(name = "post_id")
+    private ArrayList<comments> comments;
     private LocalDateTime CreatedAt;
     private LocalDateTime ModifiedAt;
 
